@@ -1,0 +1,396 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+@media only screen and (max-width: 600px){
+
+ .phone-do-image{
+width: 14vh !important;
+margin-top: 1vh !important;
+  }
+  .end{
+    margin-top: -1.5vh!important;
+    margin-bottom: -1.5vh!important;
+  }
+#text{
+  position: absolute!important;
+  /* width: 665px; */
+  /* height: 57px; */
+  /* left: 1128px; */
+  /* top: 711px; */
+  font-family: 'Rubik' !important;
+  font-style: normal!important;
+  font-weight: normal!important;
+  font-size: 2.6vw!important;
+  line-height: 20px!important;
+  text-align: center!important;
+  color: #E8ECEF!important;
+  /* margin-right: 17vw!important; */
+  /* margin-left: 16vw; */
+  /* margin-right: 56vw!important; */
+  top: 58vh!important;
+  margin-left: 16.5vw!important;
+  margin-right: 15.7vw!important;
+  display: block;
+  }
+
+  .logo{
+    margin-left: 34.5vw !important;
+    margin-top: 6vh!important;
+
+  }
+  .calls-image{
+    margin-left: 12.5vw!important;
+    margin-top: 60vh!important;
+  }
+  .image-gif{
+    width: 71vw!important;
+  }
+  .text-about{
+    font-family: 'Rubik'!important;
+    font-weight: 500!important;
+    font-size: 4.4vw!important;
+    text-align: center!important;
+    color: #FFFFFF!important;
+    margin-top: -84vh!important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: inherit !important;
+  }
+  .call{
+    font-style: normal !important;
+    font-family: 'Rubik' !important;
+    font-style: italic!important;
+    font-weight: 500!important;
+    font-size: 5.5vw !important;
+    line-height: 36px!important;
+    align-items: center!important;
+    text-align: right!important;
+    color: #FFFFFF!important;
+    margin-left: 35vw!important;
+    margin-top: -1vh!important;
+    position: inherit !important;
+  }
+  .image-group{
+    margin-top: 4vh !important;
+    width: 88vw!important;
+  }
+  
+  .calling-image-group {
+    margin-left: 4vw!important;
+    position: absolute!important;
+    top: 29vh!important;
+    margin-top: 0vh !important;
+  }
+#timer{
+font-weight: normal !important;
+font-family: 'Rubik' !important;
+position: absolute !important;
+font-size: 5.4vw !important;
+color: #FFFFFF!important;
+margin-top: -2vh !important;
+margin-left: 36.5vw !important;
+}
+  #button-call{
+    font-family: 'Rubik'!important;
+    font-style: italic!important;
+    font-weight: 500!important;
+    font-size: 4.5vw!important;
+    position: absolute!important;
+    width: 27vw!important;
+    height: 6vh!important;
+    background: #FC5A5A!important;
+    border-radius: 6px!important;
+    left: 35.1vw!important;
+    top: 50.5vh!important;
+    color: #E8ECEF!important;
+  }
+  #button-hangup{
+    font-family: 'Rubik'!important;
+    font-style: italic!important;
+    font-weight: 500!important;
+    font-size: 4.5vw!important;
+    position: absolute!important;
+    width: 27vw!important;
+    height: 6vh!important;
+    background: #FC5A5A!important;
+    border-radius: 6px!important;
+    left: 35.1vw!important;
+    top: 50.5vh!important;
+    color: #E8ECEF!important;
+  }
+  
+  .text-known{
+    position: absolute!important;
+    /* width: 665px; */
+    /* height: 57px; */
+    /* left: 1128px; */
+    /* top: 711px; */
+    font-family: 'Rubik'!important;
+    font-style: normal!important;
+    font-weight: normal!important;
+    font-size: 2.6vw!important;
+    line-height: 20px!important;
+    text-align: center!important;
+    color: #E8ECEF!important;
+    top: 56vh!important;
+    margin-left: 15.1vw !important;
+    margin-right: auto !important;
+    /* display: block; */
+    margin-top: 1vh !important;
+    width: 65vw !important;
+
+  }
+
+}
+
+    #timer{
+      font-weight: normal;
+      font-family: 'Rubik' ;
+      position: absolute ;
+      font-size: 1.7vw;
+      color: #FFFFFF;
+      margin-top: -29vh;
+      margin-left: 86.5vw;
+      }
+.logo{
+  margin-left: 8vw;
+  margin-top: 6vh;
+}
+.calls-image{
+  margin-left: 9vw;
+  margin-top: 17vh;;
+}
+.image-gif{
+  width: 34vw;
+}
+.text-about{
+  position: absolute;
+  font-family: 'Rubik';
+  font-size: 2.4vw;
+  text-align: right;
+  color: #FFFFFF;
+  margin-top: -65vh;
+  margin-left: 57vw;
+}
+.call{
+  font-family: 'Rubik';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 2vw;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #FFFFFF;
+  margin-left: 86.5vw;
+  margin-top: -41vh;
+  font-size: 1.8vw;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #FFFFFF;
+  position: absolute;
+}
+.image-group{
+  margin-top: 11vh !important;
+  width: 26vw;
+}
+.end{
+  margin-top: -2.4vh;
+  margin-bottom: -2.4vh;
+}
+.calling-image-group {
+  margin-left: 67.5vw;
+  position: absolute;
+  margin-top: -33vh;
+}
+body{
+  background-color: #083356;
+}
+#button-call{
+  position: absolute;
+    width: 7vw;
+    height: 6vh;
+    background: #FC5A5A;
+    border-radius: 0.5vw;
+    left: 87.5vw;
+    top: 63.5vh;
+    color: #E8ECEF;
+    font-size: 1.3vw;
+    font-family: 'Rubik';
+}
+#button-hangup{
+  position: absolute;
+  width: 7vw;
+  height: 6vh;
+  background: #FC5A5A;
+  border-radius: 6px;
+  left: 87.5vw;
+  top: 63.5vh;
+  color: #E8ECEF;
+  font-family: 'Rubik';
+  font-size: 1.5vw;
+}
+
+.text-known{
+  position: absolute;
+  width: 32vw;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1vw;
+  line-height: 20px;
+  text-align: right;
+  color: #E8ECEF;
+  margin-left: 61.8vw;
+  top: 71vh;
+}
+
+
+
+
+@media only screen 
+and (min-device-width: 375px) 
+and (min-device-height: 812px) 
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: portrait) { 
+  .phone-do-image{
+    width: 14vh !important;
+    margin-top: 0vh !important;
+      }
+      .end{
+        margin-top: -1.5vh!important;
+        margin-bottom: -1.5vh!important;
+      }
+    #text{
+      position: absolute!important;
+      /* width: 665px; */
+      /* height: 57px; */
+      /* left: 1128px; */
+      /* top: 711px; */
+      font-family: 'Rubik' !important;
+      font-style: normal!important;
+      font-weight: normal!important;
+      font-size: 2.6vw!important;
+      line-height: 20px!important;
+      text-align: center!important;
+      color: #E8ECEF!important;
+      /* margin-right: 17vw!important; */
+      /* margin-left: 16vw; */
+      /* margin-right: 56vw!important; */
+      top: 58vh!important;
+      margin-left: 16.5vw!important;
+      margin-right: 15.7vw!important;
+      display: block;
+      }
+      
+      .logo{
+        margin-left: 34.5vw !important;
+        margin-top: 6vh!important;
+    
+      }
+      .calls-image{
+        margin-left: 12.5vw!important;
+        margin-top: 60vh!important;
+      }
+      .image-gif{
+        width: 71vw!important;
+      }
+      .text-about{
+        font-family: 'Rubik'!important;
+        font-weight: 400!important;
+        font-size: 4.4vw!important;
+        text-align: center!important;
+        color: #FFFFFF!important;
+        margin-top: -80vh!important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .call{
+        font-style: normal !important;
+        font-family: 'Rubik' !important;
+        font-style: italic!important;
+        font-weight: 500!important;
+        font-size: 5.5vw !important;
+        line-height: 36px!important;
+        align-items: center!important;
+        text-align: right!important;
+        color: #FFFFFF!important;
+        margin-left: 37vw!important;
+        margin-top: 2vh!important;
+        position: absolute !important;
+      }
+      .image-group{
+        margin-top: 0vh !important;
+        width: 88vw!important;
+      }
+      
+      .calling-image-group {
+        margin-left: 4vw!important;
+        position: absolute!important;
+        top: 39vh!important;
+      }
+     
+      #button-call{
+
+        font-weight: 550!important;
+        font-size: 4.5vw !important;
+        position: unset !important;
+        width: 33vw!important;
+        height: 6vh!important;
+        background: #FC5A5A!important;
+        border-radius: 6px!important;
+        margin-top: 26vh !important;
+        color: #E8ECEF!important;
+        padding: 3vw !important;
+        margin-left: 32vw !important;
+        margin-right: auto !important;
+        font-family: 'Rubik' !important;
+    }
+      #button-hangup{
+        font-weight: 550!important;
+        font-size: 4.5vw !important;
+        position: unset !important;
+        width: 33vw!important;
+        height: 6vh!important;
+        background: #FC5A5A!important;
+        border-radius: 6px!important;
+        margin-top: 26vh !important;
+        color: #E8ECEF!important;
+        padding: 3vw !important;
+        margin-left: 32vw !important;
+        margin-right: auto !important;
+        font-family: 'Rubik' !important;
+      }
+      
+      .text-known{
+        position: absolute!important;
+        /* width: 665px; */
+        /* height: 57px; */
+        /* left: 1128px; */
+        /* top: 711px; */
+        font-family: 'Rubik'!important;
+        font-style: normal!important;
+        font-weight: normal!important;
+        font-size: 2.6vw!important;
+        line-height: 20px!important;
+        text-align: center!important;
+        color: #E8ECEF!important;
+        /* margin-right: 17vw!important; */
+        /* margin-left: 16vw; */
+        /* margin-right: 56vw!important; */
+        top: 56vh!important;
+        margin-left: 13.5vw!important;
+        margin-right: 18.7vw!important;
+        display: block;
+      }
+      #timer{
+         font-weight: normal !important;
+    font-family: 'Rubik' !important;
+    position: absolute !important;
+    font-size: 5.4vw !important;
+    color: #FFFFFF!important;
+    margin-top: -21vh !important;
+    margin-left: 38vw !important;
+
+      }
+}

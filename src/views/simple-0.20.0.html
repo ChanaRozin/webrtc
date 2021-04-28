@@ -1,0 +1,145 @@
+<html>
+<head>
+  <link rel="stylesheet" href="//stt.dev.phone.do/site.css">
+  <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <script src="sip-0.20.0.min.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // sipjs_demos.js
+
+        function getAudio(id) {
+            console.log(id);
+            const el = document.getElementById(id);
+            console.log(el);
+            return el;
+        }
+
+        var domain = '172.17.1.80';
+        var fromURI = 'sip:mypage@' + domain;
+        var fromName = 'Caller';
+
+        var toURI = 'sip:+972548591810@' + domain;
+        var toName = 'Callee';
+
+        var simple = null;
+        var timerVar;
+
+        // Function: createSimple
+        //   creates a SIP.js Simple instance with the given arguments plugged into the
+        //   configuration. This is a standard Simple instance for WebRTC calls.
+        //
+        // Arguments:
+        //   callerURI: the URI of the caller, aka, the URI that belongs to this user.
+        //   displayName: what name we should display the user as
+        //   remoteVideo: the DOM element id of the video for the remote
+        //   buttonId: the DOM element id of the button for that user
+        function createSimple(callerURI, displayName, remoteVideoElement) {
+
+            var configuration = {
+                media: {
+                    remote: {
+                        audio: remoteVideoElement
+                    }
+                },
+                ua: {
+                    traceSip: true,
+                    uri: callerURI,
+                    displayName: displayName,
+                    userAgentString: "SIP-0.20.0.js"
+                }
+            };
+            return new SIP.Web.SimpleUser("wss://keypad01.annatel.io:8443", configuration);
+        }
+
+        function call() {
+            timerVar = setInterval(countTimer, 1000);
+              var totalSeconds = 0;
+              function countTimer() {
+                         ++totalSeconds;
+                         var hour = Math.floor(totalSeconds /3600);
+                         var minute = Math.floor((totalSeconds - hour*3600)/60);
+                         var seconds = totalSeconds - (hour*3600 + minute*60);
+                         if(hour < 10)
+                           hour = "0"+hour;
+                         if(minute < 10)
+                           minute = "0"+minute;
+                         if(seconds < 10)
+                           seconds = "0"+seconds;
+                         document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
+                      };
+                      document.getElementById("timer").style.display= '';
+                
+                        document.getElementById("theCalling").style.display= '';
+                        document.getElementById("timer").style.display="inline";
+          document.getElementById("button-call").style.display = "none";
+          document.getElementById("button-hangup").style.display = "inline";
+            simple.call(toURI);
+        }
+
+        function hangup() {
+            document.getElementById("timer").style.display="none";
+            document.getElementById("button-call").style.display = "inline";
+            document.getElementById("button-hangup").style.display = "none";
+            document.getElementById("theCalling").style.display = "none";
+            clearInterval(timerVar);
+
+            simple.hangup();
+        }
+
+        function start() {
+            var remoteVideoElement = getAudio('remoteAudio');
+       
+            simple = createSimple(fromURI, fromName, remoteVideoElement);
+            simple.connect();
+            call();
+
+        }
+    </script>
+</head>
+<body onload="start()">
+    <div class="logo" >
+        <img class="phone-do-image" src="https://stt.dev.phone.do/images/logo.png" >
+        </div>
+        <div class="calls-image">
+          <img class="image-gif" src="https://stt.dev.phone.do/images/calls.gif"> 
+        </div>
+        <div
+        class="text-about">
+        <p>
+          phone.do הינך מועבר למוקד מכירות <br>
+          אנא המתן בעת שאנו מחברים אותך<br>
+           אל נציג מכירות  דובר עברית<br>
+        </p></div>
+        <div id="theCalling"
+        class="call"><p >...מתקשר</p></div>
+        <div id='seconds-counter'> </div>
+        <div class="calling-image-group">
+          <img class="image-group" src="https://stt.dev.phone.do/images/group.png">
+        
+        </div>
+        
+    <div class="demo-window">
+        <audio id="remoteAudio" >
+            <!-- <p>Your browser doesn't support HTML5 audio.</p> -->
+        </audio>
+        <div class="clearfix"></div>
+        <button onclick="call()" class="right" id="button-call" type="button">התקשר</button>
+        <button onclick="hangup()" class="right"id="button-hangup" type="button">נתק</button>
+
+        <div class="clearfix"></div>
+        <div id="timer"> </div>
+        <!-- <button onclick="clearInterval(timerVar)" id="button-hangup">נתק</button> -->
+        <div class="text-known">
+          <p>
+   .שיחה חינמית זו מבוצעת באמצעות טכנולוגיה מהפכנית</p>
+   <div class="end"> phone.do זאת דוגמא מוחשית לאופן בו תוכל כלקוח</div>
+  <p>
+   לתקשר עם לקוחות מכל העולם, כולל מאתרים, פוסטים, כתבות, אפליקציות, פרסומים מודפסים בעיתון ובמודעות רחוב<br>
+  .בכל שפה, תחום, מטרה ומשימה
+        </p> 
+        </div>
+      </div>
+    </div>
+    </div>
+</body>
+</html>

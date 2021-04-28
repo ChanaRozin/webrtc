@@ -1,0 +1,84 @@
+<html>
+<head>
+    <link rel="stylesheet" href="//stt.dev.phone.do/site.css">
+    <script src="sip-0.20.0.min.js" type="text/javascript"></script>
+    <script>
+        // sipjs_demos.js
+
+        function getAudio(id) {
+            console.log(id);
+            const el = document.getElementById(id);
+            console.log(el);
+            return el;
+        }
+        // '68.183.220.137'
+        // 172.17.1.80
+        // 7636178@sip1.cy2.omega-telecom.net
+        // webrtc01.phone.do:443
+        var domain = '172.17.1.80';
+        var fromURI = 'sip:mypage@' + domain;
+        var fromName = 'Caller';
+        // 7636178
+        var toURI = 'sip:+972548591810@' + domain;
+        var toName = 'Callee';
+
+        var simple = null;
+
+        // Function: createSimple
+        //   creates a SIP.js Simple instance with the given arguments plugged into the
+        //   configuration. This is a standard Simple instance for WebRTC calls.
+        //
+        // Arguments:
+        //   callerURI: the URI of the caller, aka, the URI that belongs to this user.
+        //   displayName: what name we should display the user as
+        //   remoteVideo: the DOM element id of the video for the remote
+        //   buttonId: the DOM element id of the button for that user
+        function createSimple(callerURI, displayName, remoteVideoElement) {
+
+            var configuration = {
+                media: {
+                    remote: {
+                        audio: remoteVideoElement
+                    }
+                },
+                ua: {
+                    traceSip: true,
+                    uri: callerURI,
+                    displayName: displayName,
+                    userAgentString: "SIP-0.20.0.js"
+                }
+            };
+            // "wss://68.183.220.137"
+            //wss://keypad01.annatel.io:8443
+            // "wss://webrtc01.phone.do:443
+            return new SIP.Web.SimpleUser("wss://keypad01.annatel.io:8443", configuration);
+        }
+
+        function call() {
+            simple.call(toURI);
+        }
+
+        function hangup() {
+            simple.hangup();
+        }
+
+        function start() {
+            var remoteVideoElement = getAudio('remoteAudio');
+            simple = createSimple(fromURI, fromName, remoteVideoElement);
+            simple.connect();
+        }
+
+    </script>
+</head>
+<body onload="start()">
+    <div class="demo-window">
+        <audio id="remoteAudio" controls>
+            <p>Your browser doesn't support HTML5 audio.</p>
+        </audio>
+        <div class="clearfix"></div>
+        <button onclick="call()" class="right" type="button">call</button>
+        <button onclick="hangup()" class="right" type="button">hangup</button>
+        <div class="clearfix"></div>
+    </div>
+</body>
+</html>
